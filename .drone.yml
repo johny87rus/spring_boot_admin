@@ -74,7 +74,7 @@ steps:
       - kubectl config set-context "local" --cluster="k8s.mikhailov.net" --user="user"
       - kubectl config use-context "local"
       - kubectl config set-context --current --namespace=spring-boot-admin
-      - kubectl set image deployment/admin admin=registry.mikhailov.net/spring-boot-admin:${CI_COMMIT_SHA}
+      - kubectl set image deployment/admin spring-boot-admin=registry.mikhailov.net/spring-boot-admin:${CI_COMMIT_SHA}
 
 trigger:
   event:
@@ -102,7 +102,7 @@ steps:
       - kubectl config set-context "local" --cluster="k8s.mikhailov.net" --user="user"
       - kubectl config use-context "local"
       - kubectl config set-context --current --namespace=spring-boot-admin
-      - kubectl set image deployment/admin admin=registry.mikhailov.net/spring-boot-admin:${CI_COMMIT_SHA}
+      - kubectl set image deployment/admin spring-boot-admin=registry.mikhailov.net/spring-boot-admin:${CI_COMMIT_SHA}
 trigger:
   event:
     - promote
