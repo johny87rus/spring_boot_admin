@@ -1,0 +1,14 @@
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  boot:
+    admin:
+      ui:
+        public-url: https://admin.mikhailov.net:443
+
